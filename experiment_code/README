@@ -1,0 +1,24 @@
+## Our data collection run over 3 variables:
+(i) - Privacy scenario
+(ii) - Search term
+(iii) - Selection Strategy
+
+ (i) Privacy Scenario is discriminated by code and parameter:
+
+* follow-youtube-rec-firefox.py
+Tor (--security=0) and Logged (--security=1)
+*follow-youtube-rec-chrome.py 
+Normal (--security=2) and Privaty (--security=3)
+
+(ii) Search terms: top 2017 News Google
+
+(iii) Selection Strategy:  selected by the parameter (--order)
+-1: bottom item
+ 0: top item 
+1: random item
+ 
+## Running examples:
+
+python2.7 follow-youtube-rec-firefox.py  --query="DACA" --searches=1 --branch=1 --depth=21 --name="test" --order=0 --security=0
+
+python2.7 follow-youtube-rec-chrome.py  --query="DACA" --searches=1 --branch=1 --depth=21 --name="test" --order=0 --security=3
